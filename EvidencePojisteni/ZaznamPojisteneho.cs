@@ -15,7 +15,7 @@ namespace EvidencePojisteni
         
         public string Jmeno { get { return jmeno; } set { jmeno = value; } }
         public string Prijmeni { get { return prijmeni; } set { prijmeni = value; } }
-        public string TelefonniCislo { get { return telefonniCislo;} set { } }
+        public string TelefonniCislo { get { return telefonniCislo;} set { telefonniCislo = value; } }
         public int Vek { get; set; }
 
         // Konstruktor s parametry - vytvoří novou instanci pojištěného
