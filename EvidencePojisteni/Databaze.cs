@@ -46,7 +46,7 @@ namespace EvidencePojisteni
                 Console.Write(zaznam);
             }
 
-            Console.WriteLine("\n\nPokračujte stisknutím libovolné klávesy...");
+            Console.WriteLine("\n\nPokračujte stisknutím libovolné klávesy...\n");
         }
 
        
