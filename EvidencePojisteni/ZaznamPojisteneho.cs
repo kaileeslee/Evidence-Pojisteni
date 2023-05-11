@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace EvidencePojisteni
 {
+    // Záznam v databázi
     internal class ZaznamPojisteneho
     {
+        // Jméno, příjmení, telefonní číslo a věk v záznamu
         protected string jmeno;
         protected string prijmeni;
         protected string telefonniCislo;
