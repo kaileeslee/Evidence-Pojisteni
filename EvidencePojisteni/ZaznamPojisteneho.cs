@@ -32,7 +32,7 @@ namespace EvidencePojisteni
         // Výpis záznamu
         public override string ToString()
         {
-            return Jmeno + " " + Prijmeni + " " + Vek + " " + TelefonniCislo;
+            return Jmeno + "\t" + Prijmeni + "\t" + Vek + "\t" + TelefonniCislo;
         }
                       
     
