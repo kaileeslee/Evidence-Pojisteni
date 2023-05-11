@@ -23,13 +23,29 @@ namespace EvidencePojisteni
         {
             Console.WriteLine();
             Console.WriteLine("Zadejte jméno pojištěného: ");
-            string jmeno = Console.ReadLine();
+            string jmeno;
+            while (string.IsNullOrWhiteSpace(jmeno = Console.ReadLine()))
+            { 
+                Console.WriteLine("Zadej text znovu:"); 
+            }
             Console.WriteLine("Zadejte příjmení pojištěného: ");
-            string prijmeni = Console.ReadLine();
+            string prijmeni;
+            while (string.IsNullOrWhiteSpace(prijmeni = Console.ReadLine()))
+            {
+                Console.WriteLine("Zadej text znovu:");
+            }
             Console.WriteLine("Zadejte telefonní číslo: ");
-            long telefonniCislo = long.Parse(Console.ReadLine());
+            long telefonniCislo; 
+            while (!long.TryParse(Console.ReadLine(), out telefonniCislo))
+            {
+                Console.WriteLine("Neplatné číslo, zadej znovu:");
+            }
             Console.WriteLine("Zadejte věk: ");
-            int vek = int.Parse(Console.ReadLine());
+            int vek;
+            while(!int.TryParse(Console.ReadLine(), out vek))
+            {
+                Console.WriteLine("Neplatné číslo, zadej znovu:");
+            }
             Console.WriteLine("\nData byla uložena. Pokračujte stisknutím libovolné klávesy...\n");
             
 
