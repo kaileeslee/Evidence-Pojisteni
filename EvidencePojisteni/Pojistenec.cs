@@ -26,13 +26,13 @@ namespace EvidencePojisteni
             string jmeno;
             while (string.IsNullOrWhiteSpace(jmeno = Console.ReadLine()))
             { 
-                Console.WriteLine("Zadej text znovu:"); 
+                Console.WriteLine("Zadej jméno znovu:"); 
             }
             Console.WriteLine("Zadejte příjmení pojištěného: ");
             string prijmeni;
             while (string.IsNullOrWhiteSpace(prijmeni = Console.ReadLine()))
             {
-                Console.WriteLine("Zadej text znovu:");
+                Console.WriteLine("Zadej příjmení znovu:");
             }
             Console.WriteLine("Zadejte telefonní číslo: ");
             long telefonniCislo; 
@@ -59,9 +59,17 @@ namespace EvidencePojisteni
             Console.WriteLine();
             Console.WriteLine("Vyhledávám: ");
             Console.WriteLine("Zadej jméno pojištěného: ");
-            string jmeno = Console.ReadLine();
+            string jmeno;
+            while(string.IsNullOrWhiteSpace(jmeno = Console.ReadLine()))
+            {
+                Console.WriteLine("Zadej jméno znovu:");
+            }
             Console.WriteLine("Zadej příjmení pojištěného: ");
-            string prijmeni = Console.ReadLine();
+            string prijmeni;
+            while(string.IsNullOrWhiteSpace(prijmeni = Console.ReadLine()))
+            {
+                Console.WriteLine("Zadej příjmení znovu:");
+            }
 
             List<ZaznamPojisteneho> nalezeno = databaze.NalezeniPojisteneho(jmeno, prijmeni);
             if (nalezeno.Count() > 0)
