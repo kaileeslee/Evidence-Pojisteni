@@ -10,7 +10,7 @@ Pojistenec pojistenec = new Pojistenec();
 char volba = '0';
 
 // Hlavní cyklus
-while (volba!=4)
+while (volba!='4')
 {
     Console.WriteLine("----------------------------\nEvidence pojištěných\n----------------------------");
     Console.WriteLine("\nVyberte si akci: ");
@@ -38,5 +38,3 @@ while (volba!=4)
     }
     Console.ReadKey();
 }
-
-Console.ReadKey();
