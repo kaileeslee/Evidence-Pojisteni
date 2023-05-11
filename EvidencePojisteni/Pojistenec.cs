@@ -27,7 +27,7 @@ namespace EvidencePojisteni
             Console.WriteLine("Zadejte příjmení pojištěného: ");
             string prijmeni = Console.ReadLine();
             Console.WriteLine("Zadejte telefonní číslo: ");
-            int telefonniCislo = int.Parse(Console.ReadLine());
+            long telefonniCislo = long.Parse(Console.ReadLine());
             Console.WriteLine("Zadejte věk: ");
             int vek = int.Parse(Console.ReadLine());
             Console.WriteLine("\nData byla uložena. Pokračujte stisknutím libovolné klávesy...\n");

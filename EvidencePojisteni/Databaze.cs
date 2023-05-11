@@ -19,7 +19,7 @@ namespace EvidencePojisteni
         }
 
         // Přidá nový záznam do databáze - vytvoří profil pojištěného
-        public void Vytvor(string jmeno, string prijmeni, int telefonniCislo, int vek)
+        public void Vytvor(string jmeno, string prijmeni, long telefonniCislo, int vek)
         {
             zaznam.Add(new ZaznamPojisteneho(jmeno, prijmeni, telefonniCislo, vek));
         }
