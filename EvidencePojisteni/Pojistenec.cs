@@ -27,11 +27,11 @@ namespace EvidencePojisteni
             Console.WriteLine("Zadejte příjmení pojištěného: ");
             string prijmeni = Console.ReadLine();
             Console.WriteLine("Zadejte telefonní číslo: ");
-            string telefonniCislo = Console.ReadLine();
+            int telefonniCislo = int.Parse(Console.ReadLine());
             Console.WriteLine("Zadejte věk: ");
             int vek = int.Parse(Console.ReadLine());
-            Console.WriteLine("Data byla uložena. Pokračujte stisknutím libovolné klávesy...");
-            Console.ReadLine();
+            Console.WriteLine("\nData byla uložena. Pokračujte stisknutím libovolné klávesy...");
+            Console.ReadKey();
 
             // Zápis údajů do Listu databáze v záznamu
             databaze.Vytvor(jmeno, prijmeni, telefonniCislo, vek);
@@ -50,13 +50,14 @@ namespace EvidencePojisteni
             List<ZaznamPojisteneho> nalezeno = databaze.NalezeniPojisteneho(jmeno, prijmeni);
             if (nalezeno.Count() > 0)
             {
-                Console.WriteLine("Nalezeny tyto záznamy: ");
+                Console.WriteLine("\nNalezeny tyto záznamy: ");
                 foreach (ZaznamPojisteneho z in nalezeno)
                     Console.WriteLine(z);
+                    Console.WriteLine("\nPokračujte stisknutím libovolné klávesy...");
             }
             else
                 // Nenalazeno
-                Console.WriteLine("Nebyly nalezeny žádné záznamy.");
+                Console.WriteLine("\nNebyly nalezeny žádné záznamy.\nPokračujte stisknutím libovolné klávesy...");
         }
 
         public void Vypis()

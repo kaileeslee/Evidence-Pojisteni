@@ -35,9 +35,8 @@ while (volba!=4)
             break;
         default: Console.WriteLine("Neplatná volba, stiskněte libovolnou klávesu a opakujte volbu.");
             break;
-
     }
-
-   
+    Console.ReadKey();
 }
 
+Console.ReadKey();

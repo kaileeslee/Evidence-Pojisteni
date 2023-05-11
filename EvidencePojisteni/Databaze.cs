@@ -19,7 +19,7 @@ namespace EvidencePojisteni
         }
 
         // Přidá nový záznam do databáze - vytvoří profil pojištěného
-        public void Vytvor(string jmeno, string prijmeni, string telefonniCislo, int vek)
+        public void Vytvor(string jmeno, string prijmeni, int telefonniCislo, int vek)
         {
             zaznam.Add(new ZaznamPojisteneho(jmeno, prijmeni, telefonniCislo, vek));
         }
@@ -42,8 +42,11 @@ namespace EvidencePojisteni
             // Projede celý záznam a napíše veškerý obsah
             foreach (ZaznamPojisteneho zaznam in zaznam)
             {
-                Console.WriteLine(zaznam);
+                Console.WriteLine();
+                Console.Write(zaznam);
             }
+
+            Console.WriteLine("\n\nPokračujte stisknutím libovolné klávesy...");
         }
 
        
